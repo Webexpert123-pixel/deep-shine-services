@@ -192,6 +192,9 @@ body {
   .hero-header .info {
     display: none;
   }
+  .hero{
+    overflow: hidden;
+  }
 }
 
 /* Hamburger Menu Icon - Show Only on Small Devices */
