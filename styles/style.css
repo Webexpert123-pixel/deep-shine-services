@@ -117,11 +117,12 @@ body {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: rgba(0, 0, 0, 1);
+  background-color: black;
   display: none;
   flex-direction: column;
-  min-width: 200px;
+  min-width: 300px;
   border-radius: 5px;
+  z-index: 101;
 }
 
 .nav-bar ul li:hover .dropdown {
