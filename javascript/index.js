@@ -85,3 +85,4 @@ document.getElementById('prevButton').addEventListener('click', () => {
     prevSlide();
     autoSlide = setInterval(nextSlide, 3000);  // Restart auto slide after interaction
 });
+
