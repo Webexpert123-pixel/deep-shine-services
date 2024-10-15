@@ -197,6 +197,12 @@ body {
     width: auto;
   }
 
+  .hero {
+    height: 100vh; /* Full viewport height on mobile */
+    background-size: contain; /* Ensure image is fully visible */
+    background-repeat: no-repeat;
+  }
+
   .hero-header .info {
     display: none;
   }

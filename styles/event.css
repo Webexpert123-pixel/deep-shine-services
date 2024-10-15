@@ -205,6 +205,12 @@ body {
   .hero-header .info {
     display: none;
   }
+
+  .hero {
+    height: 100vh; /* Full viewport height on mobile */
+    background-size: contain; /* Ensure image is fully visible */
+    background-repeat: no-repeat;
+  }
   .nav-bar ul {
     display: none;
     flex-direction: column;
