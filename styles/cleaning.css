@@ -187,15 +187,7 @@ body {
   background-color: #ff6500;
 }
 
-/* Hamburger Menu Icon - Show Only on Small Devices */
-.hamburger {
-  display: none;
-  background: none;
-  border: none;
-  color: white;
-  font-size: 2rem;
-  cursor: pointer;
-}
+
 
 @media (max-width: 768px) {
   
@@ -227,36 +219,7 @@ body {
   }
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .hero-header {
-    flex-direction: column;
-    padding: 10px;
-    text-align: center;
-  }
 
-  .nav-bar {
-    flex-direction: column;
-    padding: 10px;
-  }
-
-  .nav-bar ul {
-    flex-direction: column;
-  }
-
-  .hero-content h1 {
-    font-size: 2.5rem;
-    margin-top: 50px;
-  }
-
-  .about-section {
-    flex-direction: column;
-  }
-
-  .hero-content h1{
-    padding-top: 50px;
-  }
-}
 
 h1 {
   text-align: center;
@@ -348,21 +311,7 @@ h1 {
   transform: translateY(-10px);
 }
 
-/* Responsive Design */
-@media (max-width: 1200px) {
-  .service-card {
-    flex-direction: column;
-  }
 
-  .service-card img,
-  .service-content {
-    width: 100%;
-  }
-
-  .service-card.reverse img {
-    order: unset;
-  }
-}
 
 /* General Footer Styles */
 footer {
@@ -501,3 +450,131 @@ footer {
 }
 
 
+/* Media Queries */
+
+/* Hero Header on smaller screens */
+@media (max-width: 768px) {
+  .hero-header .logo img {
+    height: 100px;
+    width: auto;
+  }
+
+  .hero-header .info {
+    display: none;
+  }
+
+  .nav-bar ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-bar.active ul {
+    display: flex;
+  }
+
+  .hero-header {
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .nav-bar {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+    margin-top: 50px;
+    padding-top: 50px;
+  }
+
+  .about-section {
+    flex-direction: column;
+  }
+}
+
+/* Service Card Responsive Design */
+@media (max-width: 1200px) {
+  .service-card {
+    flex-direction: column;
+  }
+
+  .service-card img,
+  .service-content {
+    width: 100%;
+  }
+
+  .service-card.reverse img {
+    order: unset;
+  }
+}
+
+/* Footer responsiveness */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-logo,
+  .footer-links,
+  .footer-info {
+    flex: 1;
+    margin: 10px 0;
+  }
+
+  .footer-social ul {
+    justify-content: center;
+  }
+}
+
+/* Hero Content Responsiveness */
+@media (max-width: 576px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+    padding: 0 20px;
+  }
+
+  .hero-content .cta {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .nav-bar .cta {
+    padding: 8px 15px;
+  }
+}
+
+/* General Service Card Responsiveness */
+@media (max-width: 576px) {
+  .service-card {
+    flex-direction: column;
+  }
+
+  .service-content {
+    padding: 15px;
+  }
+
+  .service-content h2 {
+    font-size: 1.4em;
+  }
+
+  .service-content p,
+  .service-content ul li {
+    font-size: 0.9em;
+  }
+}
