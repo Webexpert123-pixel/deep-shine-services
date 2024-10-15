@@ -364,14 +364,11 @@
   }
 
   .certificate-images .large-image {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
+    display: none; /* Hide the large image on small screens */
   }
 
   .slider-container {
-    display: flex;
-    flex-direction: column;
+    display: block; /* Keep the slider visible */
   }
 
   .certificate-slider {
