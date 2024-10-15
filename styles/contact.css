@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+.contact-details {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 40px 20px;
+}
+
+.contact-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Added flex-wrap to allow wrapping on smaller screens */
+}
+
+.contact-info {
+    flex: 1;
+    margin-right: 40px;
+}
+
+.contact-info h3 {
+    color: #333;
+    font-size: 1.5em;
+}
+
+.contact-info p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.contact-info strong {
+    color: #ff5722;
+}
+
+.map {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.map iframe {
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+    height: 250px; /* Set height for smaller screens */
+}
+
+.contact-form {
+    padding: 40px;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    text-align: center;
+    color: #e9632b;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.contact-form .form-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    width: 100%;
+    height: 150px;
+}
+
+.contact-form .form-control-full {
+    width: 100%;
+}
+
+.contact-form button {
+    display: block;
+    width: 30%;
+    padding: 10px;
+    background-color: #e9632b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #d15125;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .contact-wrapper {
+        flex-direction: column; /* Stack the contact info and map vertically */
+    }
+
+    .contact-info {
+        margin-right: 0;
+        margin-bottom: 20px; /* Add space between contact info and map when stacked */
+    }
+
+    .map iframe {
+        height: 200px; /* Adjust height for smaller screens */
+    }
+
+    .contact-form .form-group {
+        flex-direction: column; /* Stack form fields vertically on smaller screens */
+        gap: 0;
+    }
+
+    .contact-form button {
+        width: 100%; /* Make the button take full width on mobile */
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-info h3 {
+        font-size: 1.3em; /* Slightly smaller font size for headings on mobile */
+    }
+
+    .contact-info p {
+        font-size: 0.9em; /* Adjust text size for mobile */
+    }
+
+    .contact-form h2 {
+        font-size: 24px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 14px; /* Slightly smaller input text for mobile */
+    }
+}
