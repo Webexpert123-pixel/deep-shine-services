@@ -194,6 +194,8 @@ body {
   }
   .hero{
     overflow: hidden;
+    max-width: 100vw;
+    color: red;
   }
 }
 
