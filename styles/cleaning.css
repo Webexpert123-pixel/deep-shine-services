@@ -244,7 +244,7 @@ body {
 
   .hero-content h1 {
     font-size: 2.5rem;
-    padding-top: 100px;
+    margin: 100px;
   }
 
   .about-section {
