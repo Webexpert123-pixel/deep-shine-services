@@ -3,13 +3,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, sans-serif;
-  
 }
 
 body {
   background-color: #f8f9fa;
   padding: 20px;
-  background-color: #1dbb5a;
 }
 
 /* Hero Section */
@@ -207,12 +205,7 @@ body {
   .hero-header .info {
     display: none;
   }
-
-  .hero {
-    height: 100vh; /* Full viewport height on mobile */
-    background-size: contain; /* Ensure image is fully visible */
-    background-repeat: no-repeat;
-  }
+  
   .nav-bar ul {
     display: none;
     flex-direction: column;
