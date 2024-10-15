@@ -25,6 +25,7 @@ body {
   align-items: center;
   text-align: center;
   color: white;
+  overflow: hidden;
 }
 
 /* Hero Header */
