@@ -16,7 +16,7 @@ body {
 /* Hero Section */
 .hero {
   position: relative;
-  height: 100vh;
+  height: 50vh;
   width: 100vw;
   background-image: url("https://trustwellts.com/wp-content/uploads/2021/02/dubai.jpg");
   background-size: cover;
@@ -116,11 +116,12 @@ body {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 1);
   display: none;
   flex-direction: column;
   min-width: 200px;
   border-radius: 5px;
+  z-index: 100;
 }
 
 .nav-bar ul li:hover .dropdown {
