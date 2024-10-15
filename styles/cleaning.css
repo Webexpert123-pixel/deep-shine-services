@@ -7,14 +7,13 @@
 
 body {
   background-color: #f8f9fa;
-  padding: 20px;
   color: #333;
 }
 
 /* Hero Section */
 .hero {
   position: relative;
-  height: 100vh;
+  height: 50vh;
   width: 100vw;
   background-image: url("https://trustwellts.com/wp-content/uploads/2021/02/dubai.jpg");
   background-size: cover;
@@ -25,6 +24,7 @@ body {
   align-items: center;
   text-align: center;
   color: white;
+  overflow: hidden;
 }
 
 /* Hero Header */
