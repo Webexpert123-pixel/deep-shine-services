@@ -231,6 +231,7 @@ body {
     flex-direction: column;
     padding: 10px;
     text-align: center;
+    height: 50vh;
   }
 
   .nav-bar {
