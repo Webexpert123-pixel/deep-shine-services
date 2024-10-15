@@ -14,13 +14,13 @@ body {
 /* Hero Section */
 .hero {
   position: relative;
-  height: 50vh;
+  height: 100vh;
   width: 100vw;
   background-image: url("https://trustwellts.com/wp-content/uploads/2021/02/dubai.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: column;   
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -114,11 +114,12 @@ body {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: black;
   display: none;
   flex-direction: column;
-  min-width: 200px;
+  min-width: 300px;
   border-radius: 5px;
+  z-index: 101;
 }
 
 .nav-bar ul li:hover .dropdown {
@@ -162,7 +163,6 @@ body {
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 20px;
-  color: white;
 }
 
 .hero-content p {
@@ -187,6 +187,13 @@ body {
   background-color: #ff6500;
 }
 
+/* Upper Header - Hide Info on Small Devices */
+@media (max-width: 768px) {
+  .hero-header .info {
+    display: none;
+  }
+}
+
 /* Hamburger Menu Icon - Show Only on Small Devices */
 .hamburger {
   display: none;
@@ -198,15 +205,6 @@ body {
 }
 
 @media (max-width: 768px) {
-  
-  .hero-header .logo img {
-    height: 100px;
-    width: auto;
-  }
-
-  .hero-header .info {
-    display: none;
-  }
   .nav-bar ul {
     display: none;
     flex-direction: column;
@@ -246,23 +244,20 @@ body {
 
   .hero-content h1 {
     font-size: 2.5rem;
-    margin-top: 50px;
   }
 
   .about-section {
     flex-direction: column;
   }
-
-  .hero-content h1{
-    padding-top: 50px;
-  }
 }
+
 
 h1 {
   text-align: center;
   margin-bottom: 30px;
   font-size: 2.2em;
-  color: #333;
+  color: white;
+  margin-top: 100px;
 }
 
 /* Service Card Layout */
