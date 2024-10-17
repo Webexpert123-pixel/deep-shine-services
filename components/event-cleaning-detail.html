@@ -204,6 +204,20 @@
 <a href="https://wa.me/971544454881" target="_blank" class="whatsapp-float">
   <i class="fab fa-whatsapp"></i>
 </a>
+<script>
+  // Add a scroll event listener
+  window.addEventListener("scroll", function () {
+    const navBar = document.querySelector(".nav-bar");
+    
+    // Check the scroll position of the window
+    if (window.scrollY > 100) { // Change 100 to whatever scroll position triggers the fixed behavior
+      navBar.style.top = "0"; // Set navbar to top 0vh when scrolled
+    } else {
+      navBar.style.top = "20vh"; // Restore to 20vh when scrolled back to the top
+    }
+  });
+</script>
+
     <script src="../javascript/index.js"></script>
 </body>
 
