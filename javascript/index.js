@@ -86,3 +86,82 @@ document.getElementById('prevButton').addEventListener('click', () => {
     autoSlide = setInterval(nextSlide, 3000);  // Restart auto slide after interaction
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+  const scrollToTopBtn = document.querySelector('.scroll-to-top');
+  
+  function scrollToTop() {
+    console.log("Scroll to top triggered"); // Debug line
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }
+
+  function toggleScrollButton() {
+    if (window.scrollY > 200) {
+      scrollToTopBtn.classList.add('show');
+    } else {
+      scrollToTopBtn.classList.remove('show');
+    }
+  }
+
+  window.addEventListener('scroll', toggleScrollButton);
+  scrollToTopBtn.addEventListener('click', scrollToTop);
+});
+const dots = document.querySelectorAll('.dot');
+const testimonials = document.querySelectorAll('.testimonial-item');
+
+// Function to show the selected testimonial
+function showTestimonial(index) {
+  testimonials.forEach((item, idx) => {
+    item.classList.remove('active');
+    dots[idx].classList.remove('active');
+  });
+  testimonials[index].classList.add('active');
+  dots[index].classList.add('active');
+}
+
+// Add click event to each dot
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    showTestimonial(index);
+  });
+});
+let touchStartX = 0;
+let touchEndX = 0;
+
+const slider = document.querySelector('.testimonial-slider');
+
+function handleGesture() {
+  if (touchEndX < touchStartX) {
+    // Swiped left
+    nextTestimonial();
+  }
+  if (touchEndX > touchStartX) {
+    // Swiped right
+    prevTestimonial();
+  }
+}
+
+slider.addEventListener('touchstart', (e) => {
+  touchStartX = e.changedTouches[0].screenX;
+});
+
+slider.addEventListener('touchmove', (e) => {
+  touchEndX = e.changedTouches[0].screenX;
+});
+
+slider.addEventListener('touchend', handleGesture);
+
+// Logic to go to the next/previous testimonial
+function nextTestimonial() {
+  let activeIndex = Array.from(testimonials).findIndex((item) => item.classList.contains('active'));
+  let nextIndex = (activeIndex + 1) % testimonials.length;
+  showTestimonial(nextIndex);
+}
+
+function prevTestimonial() {
+  let activeIndex = Array.from(testimonials).findIndex((item) => item.classList.contains('active'));
+  let prevIndex = (activeIndex - 1 + testimonials.length) % testimonials.length;
+  showTestimonial(prevIndex);
+}
